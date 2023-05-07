@@ -1,0 +1,46 @@
+#container {
+    flex: 1;
+    display: flex;
+    border-style: solid;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#frame {
+    flex: 1;
+    border-style: solid;
+    max-width: 20vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#display {
+    flex: 1;
+    border-style: solid;
+    margin: 15px;
+    max-height: 10vh;
+}
+
+#buttons {
+    flex: 1;
+    border-style: solid;
+    margin: 0px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.row {
+    flex: 1;
+    display: flex;
+    align-items: space-between;
+}
+
+div.button {
+    flex: 1;
+    border-style: solid;
+    margin: 5px;
+}
