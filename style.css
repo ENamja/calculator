@@ -11,47 +11,52 @@
 #frame {
     flex: 1;
     border-style: solid;
-    max-width: 20vw;
-    height: 60vh;
+    width: 100vw;
+    max-width: 300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    gap: 16px;
+    padding: 16px;
 }
 
 #display {
     flex: 1;
     border-style: solid;
-    margin: 15px;
-    max-height: 10vh;
+    min-height: 52px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 8px;
+    overflow-x: auto;
 }
 
 #buttons {
     flex: 1;
-    margin: 0px 10px 10px 10px;
+    gap: 8px;
     display: flex;
     flex-direction: column;
 }
 
 div.row {
     flex: 1;
+    gap: 8px;
     display: flex;
     align-items: space-between;
 }
 
-div.button {
+div.row div {
     display: flex;
     flex: 1;
     border-style: solid;
-    margin: 5px;
+    min-height: 52px;
     font-size: 36px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
-#display {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding: 0 10px;
+p {
     font-size: 36px;
+    margin: 0;
 }

@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function clear() {
-        let display = document.querySelector("#display");
-        display.textContent = "";
+        let p = document.querySelector("#display p");
+        p.textContent = "";
     }
 
     function clearPress() {
@@ -54,13 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function addToDisplay(text) {
-        let display = document.querySelector("#display");
-        display.textContent = display.textContent + text;
+        let p = document.querySelector("#display p");
+        p.textContent = p.textContent + text;
     }
 
     function functionPress(func) {
-        let display = document.querySelector("#display");
-        if (display.textContent) {
+        let p = document.querySelector("#display p");
+        if (p.textContent) {
             if (!operator) {
                 operator = func;
                 firstNum = parseInt(display.textContent);
@@ -77,12 +77,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function equalPress() {
-        let display = document.querySelector("#display");
+        let p = document.querySelector("#display p");
         if (firstNum && operator) {
-            if (display.textContent != "") {
+            if (p.textContent != "") {
                 secondNum = parseInt(display.textContent);
-                clear();
                 let solution = operate(operator, firstNum, secondNum);
+                clear();
+                operator = undefined;
+                secondNum = undefined;
                 firstNum = solution;
                 addToDisplay(solution);
             }
@@ -111,18 +113,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#equal").addEventListener("click", (e) => {
         equalPress();
     })
-
-    // // TESTING
-    // console.log("1 + 2", add(1, 2));
-    // console.log("2 - 1", subtract(2, 1));
-    // console.log("1 - 2", subtract(1, 2));
-    // console.log("4 * 5", multiply(4, 5));
-    // console.log("0.2 * 4", multiply(0.2, 4));
-    // console.log("20 / 4", divide(20, 4));
-    // console.log("4 / 20", divide(4, 20));
-    // console.log("2 + 1", operate("add", 2, 1))
-    // console.log("2 - 1", operate("subtract", 2, 1))
-    // console.log("2 * 4", operate("multiply", 2, 4))
-    // console.log("2 / 4", operate("divide", 2, 4))
 })
 
